@@ -80,6 +80,7 @@ const NavigationBar = () => {
     storage: storageEnabled,
     realtime: realtimeEnabled,
   })
+  const showWarehouse = useFlag('warehouse')
 
   const otherRoutes = generateOtherRoutes(projectRef, project)
   const settingsRoutes = generateSettingsRoutes(projectRef, project)
@@ -106,15 +107,16 @@ const NavigationBar = () => {
           if (!userDropdownOpen) snap.setNavigationPanelOpen(false)
         }}
       >
-        <ul className="flex flex-col gap-y-1 justify-start px-2">
+        <ul className="flex flex-col gap-y-2 justify-start px-2">
           {(!navLayoutV2 || !IS_PLATFORM) && (
             <Link
               href={IS_PLATFORM ? '/projects' : `/project/${projectRef}`}
               className="mx-2 flex items-center h-[40px]"
+              onClick={onCloseNavigationIconLink}
             >
               <img
-                alt="Supabase"
-                src={`${router.basePath}/img/supabase-logo.svg`}
+                alt="Kalbe Logo"
+                src={`${router.basePath}/img/logo.svg`}
                 className="absolute h-[40px] w-6 cursor-pointer rounded"
               />
             </Link>
@@ -161,6 +163,18 @@ const NavigationBar = () => {
                 >
                   Project API
                 </NavigationIconButton>
+              )
+            } else if (route.key === 'logs') {
+              // TODO: Undo this when warehouse flag is removed
+              const label = showWarehouse ? 'Logs & Analytics' : route.label
+              const newRoute = { ...route, label }
+              return (
+                <NavigationIconLink
+                  key={newRoute.key}
+                  route={newRoute}
+                  isActive={activeRoute === newRoute.key}
+                  onClick={onCloseNavigationIconLink}
+                />
               )
             } else {
               return (

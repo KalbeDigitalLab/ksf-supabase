@@ -32,7 +32,7 @@ const Home: NextPageWithLayout = () => {
   const projectName =
     project?.ref !== 'default' && project?.name !== undefined
       ? project?.name
-      : 'Welcome to your project'
+      : 'Welcome to Kalbe Software Factory - API'
 
   return (
     <div className="w-full mx-auto my-16 space-y-16 max-w-7xl">

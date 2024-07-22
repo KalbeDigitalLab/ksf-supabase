@@ -93,14 +93,14 @@ const ProjectLayout = ({
         <Head>
           <title>
             {title
-              ? `${title} | Supabase`
+              ? `${title} | KSF-API`
               : selectedTable
-                ? `${selectedTable} | ${projectName} | ${organizationName} | Supabase`
+                ? `${selectedTable} | ${projectName} | ${organizationName} | KSF-API`
                 : projectName
-                  ? `${projectName} | ${organizationName} | Supabase`
+                  ? `${projectName} | ${organizationName} | KSF-API`
                   : organizationName
-                    ? `${organizationName} | Supabase`
-                    : 'Supabase'}
+                    ? `${organizationName} | KSF-API`
+                    : 'KSF-API'}
           </title>
           <meta name="description" content="Supabase Studio" />
         </Head>

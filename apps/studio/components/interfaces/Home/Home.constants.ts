@@ -30,10 +30,10 @@ export const CLIENT_LIBRARIES = [
   },
   {
     language: 'Swift',
-    officialSupport: false,
+    officialSupport: true,
     releaseState: undefined,
     docsUrl: 'https://supabase.com/docs/reference/swift/initializing',
-    gitUrl: 'https://github.com/supabase-community/supabase-swift',
+    gitUrl: 'https://github.com/supabase/supabase-swift',
   },
   {
     language: 'Kotlin',
@@ -45,12 +45,6 @@ export const CLIENT_LIBRARIES = [
 ]
 
 export const EXAMPLE_PROJECTS = [
-  {
-    framework: 'Svelte',
-    title: 'Svelte kanban board',
-    description: 'A Trello clone using Supabase as the storage system.',
-    url: 'https://github.com/joshnuss/supabase-kanban',
-  },
   {
     framework: 'nextjs',
     title: 'Next.js Realtime chat app',
@@ -64,18 +58,6 @@ export const EXAMPLE_PROJECTS = [
     url: 'https://github.com/vercel/nextjs-subscription-payments',
   },
   {
-    framework: 'Expo',
-    title: 'Expo Starter',
-    description: 'Template bottom tabs with auth flow (Typescript)',
-    url: 'https://github.com/codingki/react-native-expo-template/tree/master/template-typescript-bottom-tabs-supabase-auth-flow',
-  },
-  {
-    framework: 'NestJS',
-    title: 'NestJS example',
-    description: 'NestJS example using Supabase Auth',
-    url: 'https://github.com/hiro1107/nestjs-supabase-auth',
-  },
-  {
     framework: 'React',
     title: 'React realtime chat app',
     description: 'Example app of real-time chat using supabase realtime api',
@@ -86,11 +68,5 @@ export const EXAMPLE_PROJECTS = [
     title: 'Next.js todo list app',
     description: 'Next.js todo list example',
     url: 'https://github.com/supabase/supabase/tree/master/examples/todo-list/nextjs-todo-list',
-  },
-  {
-    framework: 'Svelte',
-    title: 'Svelte todo list app',
-    description: 'Sveltejs todo with TailwindCSS and Snowpack',
-    url: 'https://github.com/supabase/supabase/tree/master/examples/todo-list/sveltejs-todo-list',
-  },
+  }
 ]
