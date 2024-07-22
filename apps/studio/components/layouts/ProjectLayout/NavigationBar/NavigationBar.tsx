@@ -108,7 +108,7 @@ const NavigationBar = () => {
           if (!userDropdownOpen) snap.setNavigationPanelOpen(false)
         }}
       >
-        <ul className="flex flex-col gap-y-1 justify-start px-2">
+        <ul className="flex flex-col gap-y-2 justify-start px-2">
           {(!navLayoutV2 || !IS_PLATFORM) && (
             <Link
               href={IS_PLATFORM ? '/projects' : `/project/${projectRef}`}
@@ -116,8 +116,8 @@ const NavigationBar = () => {
               onClick={onCloseNavigationIconLink}
             >
               <img
-                alt="Supabase"
-                src={`${router.basePath}/img/supabase-logo.svg`}
+                alt="Kalbe Logo"
+                src={`${router.basePath}/img/logo.svg`}
                 className="absolute h-[40px] w-6 cursor-pointer rounded"
               />
             </Link>
